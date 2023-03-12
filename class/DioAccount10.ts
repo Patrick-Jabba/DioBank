@@ -8,8 +8,10 @@ export class DioAccount10 extends DioAccount {
 
   deposit = (depositValue:number):void => {
     if(this.validateStatus()) {
-      let premiumDeposit = depositValue * 2
-      console.log(`Você depositou R$${premiumDeposit} reais.`)
+      console.log(`Você depositou R$${depositValue} reais.`)
+      let premiumDeposit = depositValue + 10
+      this.setBalance(premiumDeposit);
+      console.log(`Sua DioAccount10 depositou R$10,00 e o valor final acrescido ao seu saldo é de R$${premiumDeposit} reais.`)
     }
   }
 }

@@ -6,8 +6,13 @@ export class CompanyAccount extends DioAccount {
     super(name, accountNumber)
   }
 
-  getLoan = ():string => {
-    return 'Você pegou um empréstimo para pessoa jurídica'
+  getLoan = (loanValue:number):void => {
+    if(this.validateStatus()) {
+      this.setBalance(loanValue)
+      console.log('Empréstimos efetuado com sucesso, verifique seu saldo atual.')
+    } else {
+      console.log('Conta inativa ou inválida, verifique e tente novamente.')
+    }
   }
 
 }

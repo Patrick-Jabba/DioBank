@@ -10,13 +10,14 @@ export abstract class DioAccount {
     this.balance = 0
   }
 
-  public setName = (name: string):string => {
-    this.name = name
-    return name
+  public setBalance = (balance:number):number => {
+    this.balance = balance
+    return balance
   }
 
-  public getName = ():string => {
-    return this.name
+  public getBalance = ():number => {
+    console.log(`Seu saldo atual é de R$${this.balance},00`)
+    return this.balance
   }
 
   deposit = (depositValue:number):void => {
@@ -35,11 +36,7 @@ export abstract class DioAccount {
     }
   }
 
-  getBalance = ():void => {
-    console.log(`Seu saldo atual é de R$${this.balance},00`)
-  }
-
-  validateStatus = (): boolean => {
+  public validateStatus = (): boolean => {
     if(this.status) {
       return this.status
     }

@@ -9,8 +9,10 @@ individualAccount.withdraw(231)
 console.log(individualAccount.getBalance())
 
 const companyAccount1: CompanyAccount = new CompanyAccount('Ligeirinho dos Calçados', 32)
-console.log(companyAccount1.deposit(4320))
+console.log(companyAccount1.getBalance())
+console.log(companyAccount1.getLoan(4320))
 console.log(companyAccount1.getBalance())
 
 const individualAccount10: DioAccount10 = new DioAccount10('Patrick Account 10', 2)
-console.log(individualAccount.deposit(467))
+console.log(individualAccount10.deposit(467))
+console.log(individualAccount10.getBalance())
